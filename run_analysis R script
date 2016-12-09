@@ -1,5 +1,7 @@
+###run_analysis
+###I am trying to follow the steps in numbered order.
 
-###1/Merges the training and the test sets to create one data set.
+##1/Merges the training and the test sets to create one data set.
 #read datasets in
 train_x <- read.table("UCI HAR Dataset/train/X_train.txt")
 train_y <- read.table("UCI HAR Dataset/train/y_train.txt")
@@ -16,35 +18,34 @@ names(test_subject) <- "subject"
 test <- cbind(test_x, test_y, test_subject)
 train <- cbind(train_x, train_y, train_subject)
 data <- rbind(train, test)
-#data with no var names except for subject and activity.
 
 
-#2/Extracts only the measurements on the mean and standard deviation 
-#for each measurement. 
+##2/Extracts only the measurements on the mean and standard deviation for 
+##each measurement. 
 names <- read.table("UCI HAR Dataset/features.txt")
 names <- tolower(names[,2])
+#entries that include mean(), std() at the end and mean, std in an earlier
+#part of the name.
 mean_str_plus2 <- c(grep("mean", names), grep("std", names), 562:563)
 data_mean_str <- data[, mean_str_plus2]
-#data with no var names except for subject and activity.
 
-#3/Uses descriptive activity names to name the activities in the data set
+
+##3/Uses descriptive activity names to name the activities in the data set
 data_mean_str$activity <- gsub("1", "walking", data_mean_str$activity)
 data_mean_str$activity <- gsub("2", "walking_upstairs", data_mean_str$activity)
 data_mean_str$activity <- gsub("3", "walking_downstairs", data_mean_str$activity)
 data_mean_str$activity <- gsub("4", "sitting", data_mean_str$activity)
 data_mean_str$activity <- gsub("5", "standing", data_mean_str$activity)
 data_mean_str$activity <- gsub("6", "laying", data_mean_str$activity)
-#data with no var names except for subject and activity.
 
-#4/Appropriately labels the data set with descriptive variable names
+
+##4/Appropriately labels the data set with descriptive variable names
 mean_str <- c(grep("mean", names, value = TRUE), grep("std", names, value = TRUE))
 names(data_mean_str)[1:86] <- mean_str
 
 
-#5/From the data set in step 4, creates a second, independent tidy data set 
-#with the average of each variable for each activity and each subject.
-#you are being asked to produce a average for 
-#each combination of subject, activity
+##5/From the data set in step 4, creates a second, independent tidy data set 
+##with the average of each variable for each activity and each subject.
 library(reshape2)
 data_mean_str_Melt <- melt(data_mean_str, id = c("activity", "subject"),
                            measure.vars = names(data_mean_str[1:86]))
