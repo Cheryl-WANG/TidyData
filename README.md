@@ -1,5 +1,5 @@
 ==================================================================
-tidydata <- read.table("UCI HAR Dataset/tidydata.txt")
+tidydata <- read.table("UCI HAR Dataset/tidydata.txt"); View(tidydata)
 TidyData
 ==================================================================
 Original Data Set: 
