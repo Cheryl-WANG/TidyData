@@ -1,6 +1,5 @@
-#run_analysis
 
-#1/Merges the training and the test sets to create one data set.
+###1/Merges the training and the test sets to create one data set.
 #read datasets in
 train_x <- read.table("UCI HAR Dataset/train/X_train.txt")
 train_y <- read.table("UCI HAR Dataset/train/y_train.txt")
