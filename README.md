@@ -1,5 +1,4 @@
 ==================================================================
-tidydata <- read.table("UCI HAR Dataset/tidydata.txt"); View(tidydata)
 TidyData
 ==================================================================
 Original Data Set: 
@@ -22,18 +21,17 @@ TidyData
 
 For each record it is provided:
 =========================================
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
+Triaxial acceleration from the accelerometer (total acceleration), the estimated body acceleration and
+triaxial Angular velocity from the gyroscopew with "mean" and "std" in the variable names.
 
 The dataset includes the following files:
 =========================================
 
-- 'README.txt'
+- 'README.md'
 
-- 'codebook.txt': Shows information about the variables used on the feature vector.
+- 'codebook': Shows information about the variables used on the feature vector.
 
-- 'run_analysis R script.txt': Scripts that can be used to produce tidydata.txt.
+- 'run_analysis R script': Scripts that can be used to produce tidydata.txt.
 
 
 Notes: 
