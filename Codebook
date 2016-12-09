@@ -1,6 +1,55 @@
-- "subject"
+### DATA DICTIONARY - TidyData
+=====================================================================
+The features selected for this dataset come from the original dataset,
+Human Activity Recognition Using Smartphones Dataset. 
+=====================================================================
+- "subject" 
+   An identifier of the subject who carried out the experiment.
 - "activity"
-- "other variables"
-Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
-Triaxial Angular velocity from the gyroscope. 
-A 561-feature vector with time and frequency domain variables. 
+   walking, walking_upstairs, walking_downstairs, sitting, standing, laying.
+- other 86 variables
+  Triaxial acceleration from the accelerometer (total acceleration), the estimated body acceleration,
+  and triaxial Angular velocity from the gyroscope WITH "mean" or "std".
+[1] "tbodyacc-mean()-x"                    "tbodyacc-mean()-y"                   
+[3] "tbodyacc-mean()-z"                    "tgravityacc-mean()-x"                
+[5] "tgravityacc-mean()-y"                 "tgravityacc-mean()-z"                
+[7] "tbodyaccjerk-mean()-x"                "tbodyaccjerk-mean()-y"               
+[9] "tbodyaccjerk-mean()-z"                "tbodygyro-mean()-x"                  
+[11] "tbodygyro-mean()-y"                   "tbodygyro-mean()-z"                  
+[13] "tbodygyrojerk-mean()-x"               "tbodygyrojerk-mean()-y"              
+[15] "tbodygyrojerk-mean()-z"               "tbodyaccmag-mean()"                  
+[17] "tgravityaccmag-mean()"                "tbodyaccjerkmag-mean()"              
+[19] "tbodygyromag-mean()"                  "tbodygyrojerkmag-mean()"             
+[21] "fbodyacc-mean()-x"                    "fbodyacc-mean()-y"                   
+[23] "fbodyacc-mean()-z"                    "fbodyacc-meanfreq()-x"               
+[25] "fbodyacc-meanfreq()-y"                "fbodyacc-meanfreq()-z"               
+[27] "fbodyaccjerk-mean()-x"                "fbodyaccjerk-mean()-y"               
+[29] "fbodyaccjerk-mean()-z"                "fbodyaccjerk-meanfreq()-x"           
+[31] "fbodyaccjerk-meanfreq()-y"            "fbodyaccjerk-meanfreq()-z"           
+[33] "fbodygyro-mean()-x"                   "fbodygyro-mean()-y"                  
+[35] "fbodygyro-mean()-z"                   "fbodygyro-meanfreq()-x"              
+[37] "fbodygyro-meanfreq()-y"               "fbodygyro-meanfreq()-z"              
+[39] "fbodyaccmag-mean()"                   "fbodyaccmag-meanfreq()"              
+[41] "fbodybodyaccjerkmag-mean()"           "fbodybodyaccjerkmag-meanfreq()"      
+[43] "fbodybodygyromag-mean()"              "fbodybodygyromag-meanfreq()"         
+[45] "fbodybodygyrojerkmag-mean()"          "fbodybodygyrojerkmag-meanfreq()"     
+[47] "angle(tbodyaccmean,gravity)"          "angle(tbodyaccjerkmean),gravitymean)"
+[49] "angle(tbodygyromean,gravitymean)"     "angle(tbodygyrojerkmean,gravitymean)"
+[51] "angle(x,gravitymean)"                 "angle(y,gravitymean)"                
+[53] "angle(z,gravitymean)"                 "tbodyacc-std()-x"                    
+[55] "tbodyacc-std()-y"                     "tbodyacc-std()-z"                    
+[57] "tgravityacc-std()-x"                  "tgravityacc-std()-y"                 
+[59] "tgravityacc-std()-z"                  "tbodyaccjerk-std()-x"                
+[61] "tbodyaccjerk-std()-y"                 "tbodyaccjerk-std()-z"                
+[63] "tbodygyro-std()-x"                    "tbodygyro-std()-y"                   
+[65] "tbodygyro-std()-z"                    "tbodygyrojerk-std()-x"               
+[67] "tbodygyrojerk-std()-y"                "tbodygyrojerk-std()-z"               
+[69] "tbodyaccmag-std()"                    "tgravityaccmag-std()"                
+[71] "tbodyaccjerkmag-std()"                "tbodygyromag-std()"                  
+[73] "tbodygyrojerkmag-std()"               "fbodyacc-std()-x"                    
+[75] "fbodyacc-std()-y"                     "fbodyacc-std()-z"                    
+[77] "fbodyaccjerk-std()-x"                 "fbodyaccjerk-std()-y"                
+[79] "fbodyaccjerk-std()-z"                 "fbodygyro-std()-x"                   
+[81] "fbodygyro-std()-y"                    "fbodygyro-std()-z"                   
+[83] "fbodyaccmag-std()"                    "fbodybodyaccjerkmag-std()"           
+[85] "fbodybodygyromag-std()"               "fbodybodygyrojerkmag-std()" 
